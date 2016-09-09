@@ -3,6 +3,7 @@
 
 from sys import argv, exit
 import requests
+import lib
 
 def main():
     try:
@@ -17,12 +18,16 @@ def main():
         "units": "imperial",
     }
 
+
+
     r = requests.get("http://api.openweathermap.org/data/2.5/weather", params=payload)
 
     print(r.url)
     weather_data = r.json()
-    print("Current Temp: {}".format(weather_data["main"]["temp"]))
 
+    lib.print_data(weather_data)
+
+    
 
 if __name__ == '__main__':
     main()
