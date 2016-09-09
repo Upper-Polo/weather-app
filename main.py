@@ -2,6 +2,7 @@
 # main.py
 
 from sys import argv, exit
+import requests
 
 def main():
     try:
@@ -20,7 +21,7 @@ def main():
 
     print(r.url)
     weather_data = r.json()
-    print("Current Temp: {}".format(weather["main"]["temp"]))
+    print("Current Temp: {}".format(weather_data["main"]["temp"]))
 
 
 if __name__ == '__main__':
