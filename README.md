@@ -25,5 +25,5 @@ Don't try to get a location by zipcode with the OpenWeatherMap API. There is cur
 #### Bonus:
 
 - User should be able to save a location as a favorite and load the favorites from a file
--Switch to using a different weather API: http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13#apiu
--Add Comment Collapse
+- Switch to using a different weather API: http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13#apiu
+- Add Comment Collapse
