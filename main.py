@@ -18,16 +18,9 @@ def main():
         "units": "imperial",
     }
 
-
-
     r = requests.get("http://api.openweathermap.org/data/2.5/weather", params=payload)
-
-    print(r.url)
     weather_data = r.json()
-
     lib.print_data(weather_data)
-
-    
 
 if __name__ == '__main__':
     main()
