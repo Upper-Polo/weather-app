@@ -15,3 +15,15 @@ def print_data(data_in):
     #print("Sky: {}".format())
     print("Wind: {} MPH".format(data_in["wind"]["speed"]))
 
+# Class definitions.
+# ------------------
+class Payload:
+    def __init__(self, city, country, user_key):
+        self.city = city
+        self.country = country
+        self.user_key = user_key
+        self.req = {
+            "appid": self.user_key,
+            "q": "{},{}".format(self.city, self.country),
+            "units": "imperial"
+        }

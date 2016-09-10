@@ -12,13 +12,16 @@ def main():
         print('Pass in AP key')
         exit(0)
 
-    payload = {
-        "appid": api_key,
-        "q": "Lexington,us",
-        "units": "imperial",
-    }
+    print('\nGet the weather by city and country\n')
 
-    r = requests.get("http://api.openweathermap.org/data/2.5/weather", params=payload)
+    cityname = lib.prompt('City: ')
+    countryname = lib.prompt('Country: ')
+
+    payload = lib.Payload(cityname, countryname, api_key)
+
+    
+
+    r = requests.get("http://api.openweathermap.org/data/2.5/weather", params=payload.req)
     weather_data = r.json()
     lib.print_data(weather_data)
 
