@@ -11,10 +11,10 @@ def prompt(msg):
 
 def print_data(data_in):
     print("Date: {}".format(data_in['dt']))
-    print("Description: {}".format(['weather'][0]['description']))
+    print("Description: {}".format(data_in['weather'][0]['description']))
     print("Temp: {}".format(data_in["main"]["temp"]))
     print("Wind: {} MPH".format(data_in["wind"]["speed"]))
-    print("Pressure: {}".format(result['main']['pressure']))
+    print("Pressure: {}".format(data_in['main']['pressure']))
 
 # Class definitions.
 # ------------------
