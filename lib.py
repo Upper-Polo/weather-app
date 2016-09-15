@@ -2,7 +2,6 @@
 # lib.py
 # Classes and functions for weather-app.
 
-
 # Function definitions.
 # ---------------------
 
@@ -11,9 +10,11 @@ def prompt(msg):
     return input(msg)
 
 def print_data(data_in):
+    print("Date: {}".format(data_in['dt']))
+    print("Description: {}".format(['weather'][0]['description']))
     print("Temp: {}".format(data_in["main"]["temp"]))
-    #print("Sky: {}".format())
     print("Wind: {} MPH".format(data_in["wind"]["speed"]))
+    print("Pressure: {}".format(result['main']['pressure']))
 
 # Class definitions.
 # ------------------
